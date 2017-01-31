@@ -11,12 +11,8 @@ include("inc/data.php");
 // présentation
 // inclusion des data => ici on a accès à la variable $products
 // print_r($products);
+include("templates/header.php");
+include("templates/product-list.php");
+include("templates/footer.php");
 
-include("templates/header.php"); ?>
-<main>
-    <p>Ici se tiendra la liste de mes articles</p>
-    <!-- objectif de l'aprem: afficher la liste des articles ici! -->
-    <!-- loupe = lien qui affiche le détail d'un produit -->
-    <!-- bouton ajouter au panier pour plus tard -->
-</main>
-<?php include("templates/footer.php"); ?>
+?>
