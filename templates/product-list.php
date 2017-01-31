@@ -4,7 +4,7 @@
     <!-- bouton ajouter au panier pour plus tard -->
 
     <!-- un produit = un <article> -->
-    <?php foreach ($products as $id => $product): ?>
+    <?php foreach ($products as $index => $product): ?>
 
         <article>
             <h1><?= $product["title"] ?></h1>
@@ -19,10 +19,15 @@
                 <?php endif; ?>
             </p>
             <p>
-                <a href="#">Voir</a>
+                <!-- lien vers la page Détail d'un produit: -->
+                <!-- script:product.php, av. parametre GET qui contient
+                l'index du produit dans le tableau, pour pouvoir récupérer les infos du produit
+                dans product.php (avec $_GET["index"]) -->
+                <a href="product.php?index=<?= $index ?>">Voir</a>
                 <button type="button" name="button">Ajouter au panier</button>
             </p>
         </article>
+        <hr>
 
     <?php endforeach; ?>
 </main>
